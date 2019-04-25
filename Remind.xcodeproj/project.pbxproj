@@ -12,6 +12,12 @@
 		DCC18D1C2270A9FE00751220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC18D1A2270A9FE00751220 /* Main.storyboard */; };
 		DCC18D1E2270AA0000751220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC18D1D2270AA0000751220 /* Assets.xcassets */; };
 		DCC18D212270AA0000751220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC18D1F2270AA0000751220 /* LaunchScreen.storyboard */; };
+		DCC18D2D2270ADBC00751220 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC18D2C2270ADBC00751220 /* ShadowView.swift */; };
+		DCC18D322270B3B600751220 /* TimeAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC18D2F2270B3B600751220 /* TimeAlert.png */; };
+		DCC18D332270B3B600751220 /* DateAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC18D302270B3B600751220 /* DateAlert.png */; };
+		DCC18D342270B3B600751220 /* LocationAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC18D312270B3B600751220 /* LocationAlert.png */; };
+		DCC18D362270B62300751220 /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC18D352270B62300751220 /* UNService.swift */; };
+		DCC18D382270C10C00751220 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC18D372270C10C00751220 /* AlertService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		DCC18D1D2270AA0000751220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCC18D202270AA0000751220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCC18D222270AA0000751220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC18D2C2270ADBC00751220 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		DCC18D2F2270B3B600751220 /* TimeAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TimeAlert.png; path = Assets/TimeAlert.png; sourceTree = SOURCE_ROOT; };
+		DCC18D302270B3B600751220 /* DateAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DateAlert.png; path = Assets/DateAlert.png; sourceTree = SOURCE_ROOT; };
+		DCC18D312270B3B600751220 /* LocationAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LocationAlert.png; path = Assets/LocationAlert.png; sourceTree = SOURCE_ROOT; };
+		DCC18D352270B62300751220 /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
+		DCC18D372270C10C00751220 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,60 @@
 		DCC18D152270A9FE00751220 /* Remind */ = {
 			isa = PBXGroup;
 			children = (
-				DCC18D162270A9FE00751220 /* AppDelegate.swift */,
-				DCC18D182270A9FE00751220 /* ViewController.swift */,
-				DCC18D1A2270A9FE00751220 /* Main.storyboard */,
-				DCC18D1D2270AA0000751220 /* Assets.xcassets */,
-				DCC18D1F2270AA0000751220 /* LaunchScreen.storyboard */,
+				DCC18D2B2270ABFD00751220 /* Controller */,
+				DCC18D2A2270ABF800751220 /* View */,
+				DCC18D292270ABF200751220 /* Model */,
+				DCC18D282270ABE400751220 /* Service */,
 				DCC18D222270AA0000751220 /* Info.plist */,
 			);
 			path = Remind;
+			sourceTree = "<group>";
+		};
+		DCC18D282270ABE400751220 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DCC18D352270B62300751220 /* UNService.swift */,
+				DCC18D372270C10C00751220 /* AlertService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DCC18D292270ABF200751220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DCC18D2A2270ABF800751220 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DCC18D2E2270B36B00751220 /* NotificationAssets */,
+				DCC18D1D2270AA0000751220 /* Assets.xcassets */,
+				DCC18D1A2270A9FE00751220 /* Main.storyboard */,
+				DCC18D1F2270AA0000751220 /* LaunchScreen.storyboard */,
+				DCC18D2C2270ADBC00751220 /* ShadowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCC18D2B2270ABFD00751220 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DCC18D162270A9FE00751220 /* AppDelegate.swift */,
+				DCC18D182270A9FE00751220 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DCC18D2E2270B36B00751220 /* NotificationAssets */ = {
+			isa = PBXGroup;
+			children = (
+				DCC18D302270B3B600751220 /* DateAlert.png */,
+				DCC18D312270B3B600751220 /* LocationAlert.png */,
+				DCC18D2F2270B3B600751220 /* TimeAlert.png */,
+			);
+			path = NotificationAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC18D212270AA0000751220 /* LaunchScreen.storyboard in Resources */,
+				DCC18D332270B3B600751220 /* DateAlert.png in Resources */,
 				DCC18D1E2270AA0000751220 /* Assets.xcassets in Resources */,
+				DCC18D342270B3B600751220 /* LocationAlert.png in Resources */,
 				DCC18D1C2270A9FE00751220 /* Main.storyboard in Resources */,
+				DCC18D322270B3B600751220 /* TimeAlert.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC18D2D2270ADBC00751220 /* ShadowView.swift in Sources */,
 				DCC18D192270A9FE00751220 /* ViewController.swift in Sources */,
+				DCC18D362270B62300751220 /* UNService.swift in Sources */,
 				DCC18D172270A9FE00751220 /* AppDelegate.swift in Sources */,
+				DCC18D382270C10C00751220 /* AlertService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
